@@ -1,6 +1,6 @@
+#include<iostream>
 #include<list>
 #include"student.hpp"
 
-std::list<student> db;
-
 void interface();
+void print(std::list<student> db);

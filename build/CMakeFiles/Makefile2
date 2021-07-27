@@ -53,8 +53,8 @@ CMAKE_BINARY_DIR = /home/leszol/CS/University-db/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Univerity-db-ut.dir/all
-all: CMakeFiles/Univerity-db.dir/all
+all: CMakeFiles/University-db-ut.dir/all
+all: CMakeFiles/University-db.dir/all
 
 .PHONY : all
 
@@ -64,8 +64,8 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Univerity-db-ut.dir/clean
-clean: CMakeFiles/Univerity-db.dir/clean
+clean: CMakeFiles/University-db-ut.dir/clean
+clean: CMakeFiles/University-db.dir/clean
 clean: googletest-build/clean
 
 .PHONY : clean
@@ -131,59 +131,59 @@ googletest-build/googletest/clean: googletest-build/googletest/CMakeFiles/gtest.
 .PHONY : googletest-build/googletest/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Univerity-db-ut.dir
+# Target rules for target CMakeFiles/University-db-ut.dir
 
 # All Build rule for target.
-CMakeFiles/Univerity-db-ut.dir/all: googletest-build/googletest/CMakeFiles/gtest_main.dir/all
-CMakeFiles/Univerity-db-ut.dir/all: googletest-build/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) -f CMakeFiles/Univerity-db-ut.dir/build.make CMakeFiles/Univerity-db-ut.dir/depend
-	$(MAKE) -f CMakeFiles/Univerity-db-ut.dir/build.make CMakeFiles/Univerity-db-ut.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leszol/CS/University-db/build/CMakeFiles --progress-num=5,6,7,8 "Built target Univerity-db-ut"
-.PHONY : CMakeFiles/Univerity-db-ut.dir/all
+CMakeFiles/University-db-ut.dir/all: googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/University-db-ut.dir/all: googletest-build/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f CMakeFiles/University-db-ut.dir/build.make CMakeFiles/University-db-ut.dir/depend
+	$(MAKE) -f CMakeFiles/University-db-ut.dir/build.make CMakeFiles/University-db-ut.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leszol/CS/University-db/build/CMakeFiles --progress-num=5,6,7,8 "Built target University-db-ut"
+.PHONY : CMakeFiles/University-db-ut.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Univerity-db-ut.dir/rule: cmake_check_build_system
+CMakeFiles/University-db-ut.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leszol/CS/University-db/build/CMakeFiles 8
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Univerity-db-ut.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/University-db-ut.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leszol/CS/University-db/build/CMakeFiles 0
-.PHONY : CMakeFiles/Univerity-db-ut.dir/rule
+.PHONY : CMakeFiles/University-db-ut.dir/rule
 
 # Convenience name for target.
-Univerity-db-ut: CMakeFiles/Univerity-db-ut.dir/rule
+University-db-ut: CMakeFiles/University-db-ut.dir/rule
 
-.PHONY : Univerity-db-ut
+.PHONY : University-db-ut
 
 # clean rule for target.
-CMakeFiles/Univerity-db-ut.dir/clean:
-	$(MAKE) -f CMakeFiles/Univerity-db-ut.dir/build.make CMakeFiles/Univerity-db-ut.dir/clean
-.PHONY : CMakeFiles/Univerity-db-ut.dir/clean
+CMakeFiles/University-db-ut.dir/clean:
+	$(MAKE) -f CMakeFiles/University-db-ut.dir/build.make CMakeFiles/University-db-ut.dir/clean
+.PHONY : CMakeFiles/University-db-ut.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Univerity-db.dir
+# Target rules for target CMakeFiles/University-db.dir
 
 # All Build rule for target.
-CMakeFiles/Univerity-db.dir/all:
-	$(MAKE) -f CMakeFiles/Univerity-db.dir/build.make CMakeFiles/Univerity-db.dir/depend
-	$(MAKE) -f CMakeFiles/Univerity-db.dir/build.make CMakeFiles/Univerity-db.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leszol/CS/University-db/build/CMakeFiles --progress-num=1,2,3,4 "Built target Univerity-db"
-.PHONY : CMakeFiles/Univerity-db.dir/all
+CMakeFiles/University-db.dir/all:
+	$(MAKE) -f CMakeFiles/University-db.dir/build.make CMakeFiles/University-db.dir/depend
+	$(MAKE) -f CMakeFiles/University-db.dir/build.make CMakeFiles/University-db.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leszol/CS/University-db/build/CMakeFiles --progress-num=1,2,3,4 "Built target University-db"
+.PHONY : CMakeFiles/University-db.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Univerity-db.dir/rule: cmake_check_build_system
+CMakeFiles/University-db.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leszol/CS/University-db/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Univerity-db.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/University-db.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leszol/CS/University-db/build/CMakeFiles 0
-.PHONY : CMakeFiles/Univerity-db.dir/rule
+.PHONY : CMakeFiles/University-db.dir/rule
 
 # Convenience name for target.
-Univerity-db: CMakeFiles/Univerity-db.dir/rule
+University-db: CMakeFiles/University-db.dir/rule
 
-.PHONY : Univerity-db
+.PHONY : University-db
 
 # clean rule for target.
-CMakeFiles/Univerity-db.dir/clean:
-	$(MAKE) -f CMakeFiles/Univerity-db.dir/build.make CMakeFiles/Univerity-db.dir/clean
-.PHONY : CMakeFiles/Univerity-db.dir/clean
+CMakeFiles/University-db.dir/clean:
+	$(MAKE) -f CMakeFiles/University-db.dir/build.make CMakeFiles/University-db.dir/clean
+.PHONY : CMakeFiles/University-db.dir/clean
 
 #=============================================================================
 # Target rules for target googletest-build/googlemock/CMakeFiles/gmock_main.dir

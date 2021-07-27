@@ -199,7 +199,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Univerity-db
+CMAKE_PROJECT_NAME:STATIC=University-db
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=1.11.0
@@ -287,6 +287,12 @@ Univerity-db_BINARY_DIR:STATIC=/home/leszol/CS/University-db/build
 
 //Value Computed by CMake
 Univerity-db_SOURCE_DIR:STATIC=/home/leszol/CS/University-db
+
+//Value Computed by CMake
+University-db_BINARY_DIR:STATIC=/home/leszol/CS/University-db/build
+
+//Value Computed by CMake
+University-db_SOURCE_DIR:STATIC=/home/leszol/CS/University-db
 
 //Path to a program.
 _Python_EXECUTABLE:FILEPATH=/usr/bin/python3.8
