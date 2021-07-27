@@ -5,16 +5,33 @@
 int main()  {
 
     std::list<student> PW;
-    auto poz = PW.begin();
-
-    PW.emplace_back(student("Jan","Kapela",12345));
-    PW.emplace_back(student("Cezary","Graf",24680));
-    PW.emplace_back(student("Rafał","Zaorski",97531));
-    PW.emplace_back(student("Sławomir","Mentzen",33333));
-    PW.emplace_back(student("Fill","Konieczny",55555));
-    PW.emplace_back(student("Andrzej","Duda","Warszawa, al.Krakowskie Przedmieście 1",75124534987,11111,'M'));
-    PW.emplace_back(student("Adrian","ZanPWerg","Warszawa, ul. Kryształowa 6",81033074987,99789,'M'));
-    PW.emplace_back(student("Krystyna","Pawłowicz","Warszawa, ul. Srebrna 77",350820514977,88888,'K'));
-print(PW);
-    
+    fullFill(PW);
+    while(1)    {    
+        switch(interface()) {
+            case 0:
+                return 0;
+            case 1:
+                addStudent(PW);
+                break;
+            case 2:
+                print(PW);
+                break;
+            case 3:
+                serchName(PW);
+                break;
+            case 4:
+                serchPesel(PW);
+                break;
+            case 5:
+                sortPesel(PW);
+                break;
+            case 6:
+                sortName(PW);
+                break;
+            case 7:
+                delStudent(PW);
+                break;
+        }
+    }
+   
 }

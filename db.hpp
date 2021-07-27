@@ -2,5 +2,12 @@
 #include<list>
 #include"student.hpp"
 
-void interface();
-void print(std::list<student> db);
+uint8_t interface();
+void print(const std::list<student>& db);
+void fullFill(std::list<student>& db);
+void addStudent(std::list<student>& db);
+void serchName(const std::list<student>& db);
+void serchPesel(const std::list<student>& db);
+void sortPesel(std::list<student>& db);
+void sortName(std::list<student>& db);
+void delStudent(std::list<student>& db);
