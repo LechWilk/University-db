@@ -151,13 +151,24 @@ void serchPesel(const std::list<student>& db)  {
 
     std::cout<<"Znaloziono "<<resoults<<" studentów.\n\n";
 
-
 }
-void sortPesel(std::list<student>& db)   {
 
+bool compPesel(const student& s1, const student& s2)  {
+    if(s1.getPesel()<s2.getPesel()) return true;
+    return false;
+}
+
+bool compName(const student& s1, const student& s2)  {
+    if(std::lexicographical_compare(s1.getLastName().begin(), s1.getLastName().end(),s2.getLastName().begin(),s2.getLastName().end()))
+        return true;
+    return false;
+}
+
+void sortPesel(std::list<student>& db)   {
+    db.sort(compPesel);
 }
 void sortName(std::list<student>& db)    {
-    
+    db.sort(compName);
 }
 void delStudent(std::list<student>& db)  {
     

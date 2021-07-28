@@ -13,3 +13,7 @@ void sortPesel(std::list<student>& db);
 void sortName(std::list<student>& db);
 void delStudent(std::list<student>& db);
 void printBreak(int);
+
+
+bool compPesel(const student& s1, const student& s2);
+bool compName(const student& s1, const student& s2); 
