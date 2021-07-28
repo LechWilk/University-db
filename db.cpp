@@ -64,17 +64,12 @@ void save(const std::list<student>& db)    {
     for(const auto &s:db)  {
         temp_sex=s.isMale() ? "M" : temp_sex=s.isFemale() ? "K" : "";
 
-        fileDB.width(10);
-        fileDB<<std::left<<"|| " +std::to_string(s.getId());
-        fileDB.width(30);
-        fileDB<<"| " +s.getName();
-        fileDB.width(5);
-        fileDB<<"| " +temp_sex;
-        fileDB.width(45);
-        fileDB<<"| " +s.getAddress();
-        fileDB.width(15);
-        fileDB<<"| " +std::to_string(s.getPesel())<<"|";
-        fileDB<<'\n';
+        fileDB<<
+        std::to_string(s.getId())<<'\t'<<
+        s.getName()<<'\t'<<
+        temp_sex<<'\t'<<
+        s.getAddress()<<'\t'<<
+        std::to_string(s.getPesel())<<'\n';
     }
 
 }
