@@ -5,7 +5,7 @@
 int main()  {
 
     std::list<student> PW;
-    fullFill(PW);
+    load(PW);
     while(1)    {    
         switch(interface()) {
             case 0:

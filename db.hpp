@@ -5,6 +5,7 @@
 uint8_t interface();
 void print(const std::list<student>& db);
 void save(const std::list<student>& db);
+void load(std::list<student>& db);
 void fullFill(std::list<student>& db);
 void addStudent(std::list<student>& db);
 void serchName(const std::list<student>& db);

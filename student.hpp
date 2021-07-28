@@ -18,6 +18,7 @@ class student   {
         std::string getName() const;
         std::string getAddress() const;
         std::string getLastName() const;
+        std::string getFirstName() const;
         unsigned getId() const;
         long getPesel() const;
         bool isMale() const;

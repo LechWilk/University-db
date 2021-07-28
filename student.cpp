@@ -12,6 +12,10 @@ std::string student::getLastName() const{
     return student::lName_;
 }
 
+std::string student::getFirstName() const{
+    return student::fName_;
+}
+
 long student::getPesel() const{
     return student::Pesel_;
 }

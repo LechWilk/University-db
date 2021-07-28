@@ -1,8 +1,8 @@
-24680	Cezary Graf			0
-12345	Jan Kapela			0
-55555	Fill Konieczny			0
-33333	Slawomir Mentzen			0
-88888	Krystyna Pawlowicz	K	Warszawa, ul. Srebrna 77	35082051497
-8	Lech Wilk	M	Mala 14/8	83021709392
-99789	Adrian Zandberg	M	Warszawa, ul. Krysztalowa 6	81033074987
-97531	Rafal Zaorski			0
+3333	Mentzen	Slawomir			0
+5555	Konieczny	Fill			0
+9978	Zandberg	Adrian	M	Warszawa, ul. Krysztalowa 6	81033074987
+8888	Pawlowicz	Krystyna	K	Warszawa, ul. Srebrna 77	35082051497
+6111	Wilk	Lech	M	ul. Mala 14/8	83021709392
+7	Kaczynski	Jaroslaw	M	ul. Nowogrodzka 84/86, 02-018 Warszawa	49061812345
+8	Bosak	Krzysztof	M	ul. Polska 777	84548412345
+9	Pochanke	Justyna	K	ul. Gdzies na Sadybie 999	87542196325

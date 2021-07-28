@@ -66,12 +66,55 @@ void save(const std::list<student>& db)    {
 
         fileDB<<
         std::to_string(s.getId())<<'\t'<<
-        s.getName()<<'\t'<<
+        s.getLastName()<<'\t'<<
+        s.getFirstName()<<'\t'<<
         temp_sex<<'\t'<<
         s.getAddress()<<'\t'<<
         std::to_string(s.getPesel())<<'\n';
     }
 
+}
+
+void load(std::list<student>& db)   {
+    std::ifstream fileDB("University-db.txt");
+    std::string lineDB;
+    std::string firstN, lastN, address;
+    char sex;
+    long nrPesel;
+    unsigned index;
+
+    int ppos,pos;
+    while(1)    {
+        pos=0;
+        
+        std::getline(fileDB,lineDB);
+        if(lineDB.size()<1) break;
+    
+        pos = lineDB.find('\t',pos);
+        index=std::stoul(lineDB.substr(0,pos));
+         
+        ppos=pos;
+        pos = lineDB.find('\t',pos+1);
+        lastN=lineDB.substr(ppos+1,pos-ppos-1);
+     
+        ppos=pos;
+        pos = lineDB.find('\t',pos+1);
+        firstN=lineDB.substr(ppos+1,pos-ppos-1);
+        
+        ppos=pos;
+        pos = lineDB.find('\t',pos+1);
+        sex=lineDB[ppos+1];
+     
+        ppos=pos;
+        pos = lineDB.find('\t',pos+1);
+        address=lineDB.substr(ppos+1,pos-ppos-1);
+     
+        nrPesel=std::stol(lineDB.substr(pos+1));
+
+        student newStudent(firstN, lastN, address, nrPesel, index, sex);
+        db.emplace_back(newStudent);
+
+    }
 }
 
 void fullFill(std::list<student>& db)   {
