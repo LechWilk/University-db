@@ -1,8 +1,8 @@
-12345	Jan Kapela			0
 24680	Cezary Graf			0
-97531	Rafal Zaorski			0
-33333	Slawomir Mentzen			0
+12345	Jan Kapela			0
 55555	Fill Konieczny			0
-11111	Andrzej Duda	M	Warszawa, al.Krakowskie Przedmiescie 1	75124534987
-99789	Adrian Zandberg	M	Warszawa, ul. Krysztalowa 6	81033074987
+33333	Slawomir Mentzen			0
 88888	Krystyna Pawlowicz	K	Warszawa, ul. Srebrna 77	35082051497
+8	Lech Wilk	M	Mala 14/8	83021709392
+99789	Adrian Zandberg	M	Warszawa, ul. Krysztalowa 6	81033074987
+97531	Rafal Zaorski			0

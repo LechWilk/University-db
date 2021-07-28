@@ -154,14 +154,11 @@ void serchPesel(const std::list<student>& db)  {
 }
 
 bool compPesel(const student& s1, const student& s2)  {
-    if(s1.getPesel()<s2.getPesel()) return true;
-    return false;
+    return s1.getPesel()<s2.getPesel();
 }
 
 bool compName(const student& s1, const student& s2)  {
-    if(std::lexicographical_compare(s1.getLastName().begin(), s1.getLastName().end(),s2.getLastName().begin(),s2.getLastName().end()))
-        return true;
-    return false;
+    return std::lexicographical_compare(s1.getLastName().begin(), s1.getLastName().end(),s2.getLastName().begin(),s2.getLastName().end());
 }
 
 void sortPesel(std::list<student>& db)   {
@@ -170,6 +167,10 @@ void sortPesel(std::list<student>& db)   {
 void sortName(std::list<student>& db)    {
     db.sort(compName);
 }
+
 void delStudent(std::list<student>& db)  {
-    
+    unsigned id=0;
+    std::cout<<"Podaj proszę nr indeksu wykreślanego studenta.";
+    std::cin>>id;
+    db.remove_if([id](const student& s){    return s.getId()==id;   });     //WTF?!? Nie kumam tej jebanej składni..
 }
