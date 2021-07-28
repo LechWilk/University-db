@@ -25,26 +25,43 @@ uint8_t interface()    {
 
 void print(const std::list<student>& db)    {
     std::string temp_sex;
+    printBreak(107);
+
     for(const auto &s:db)  {
-        temp_sex=s.isMale() ? "mężczyzna" : temp_sex=s.isFemale() ? "kobieta" : "";
-        std::cout<<"||  "<<s.getId()<<
-        "  ||  "<<s.getName()<<
-        "  ||  "<<temp_sex<<
-        "  ||  "<<s.getAddress()<<
-        "  ||  "<<s.getPesel()<<'\n';
+        temp_sex=s.isMale() ? "M" : temp_sex=s.isFemale() ? "K" : "";
+
+        std::cout.width(10);
+        std::cout<<std::left<<"|| " +std::to_string(s.getId());
+        std::cout.width(30);
+        std::cout<<"|| " +s.getName();
+        std::cout.width(5);
+        std::cout<<"|| " +temp_sex;
+        std::cout.width(45);
+        std::cout<<"|| " +s.getAddress();
+        std::cout.width(15);
+        std::cout<<"|| " +std::to_string(s.getPesel())<<"||";
+        std::cout<<'\n';
     }
+    printBreak(107);
+}
+
+void printBreak(int len)    {
+    std::cout.fill('=');
+    std::cout.width(len);
+    std::cout<<'='<<'\n';
+    std::cout.fill(' ');
 }
 
 void fullFill(std::list<student>& db)   {
 
     db.emplace_back(student("Jan","Kapela",12345));
     db.emplace_back(student("Cezary","Graf",24680));
-    db.emplace_back(student("Rafał","Zaorski",97531));
-    db.emplace_back(student("Sławomir","Mentzen",33333));
+    db.emplace_back(student("Rafal","Zaorski",97531));
+    db.emplace_back(student("Slawomir","Mentzen",33333));
     db.emplace_back(student("Fill","Konieczny",55555));
-    db.emplace_back(student("Andrzej","Duda","Warszawa, al.Krakowskie Przedmieście 1",75124534987,11111,'M'));
-    db.emplace_back(student("Adrian","Zandberg","Warszawa, ul. Kryształowa 6",81033074987,99789,'M'));
-    db.emplace_back(student("Krystyna","Pawłowicz","Warszawa, ul. Srebrna 77",350820514977,88888,'K'));
+    db.emplace_back(student("Andrzej","Duda","Warszawa, al.Krakowskie Przedmiescie 1",75124534987,11111,'M'));
+    db.emplace_back(student("Adrian","Zandberg","Warszawa, ul. Krysztalowa 6",81033074987,99789,'M'));
+    db.emplace_back(student("Krystyna","Pawlowicz","Warszawa, ul. Srebrna 77",35082051497,88888,'K'));
 }
 
 void addStudent(std::list<student>& db)  {
@@ -53,21 +70,19 @@ void addStudent(std::list<student>& db)  {
     long nrPesel;
     unsigned index;
 
+    std::cin.get();
+
     std::cout<<"imię: ";
     std::getline(std::cin,firstN);
-    //std::cin>>firstN;
-
+ 
     std::cout<<"nazwisko: ";
     std::getline(std::cin,lastN);
-    //std::cin>>lastN;
-    
+   
     std::cout<<"Adres: ";
     std::getline(std::cin,address);
-    //std::cin>>address;
     
     std::cout<<"PESEL: ";
     std::cin>>nrPesel;
-    //std::cin>>nrPesel;
     
     std::cout<<"Płeć M/K: ";
     std::cin>>sex;

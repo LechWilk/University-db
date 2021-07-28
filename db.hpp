@@ -11,3 +11,4 @@ void serchPesel(const std::list<student>& db);
 void sortPesel(std::list<student>& db);
 void sortName(std::list<student>& db);
 void delStudent(std::list<student>& db);
+void printBreak(int);
