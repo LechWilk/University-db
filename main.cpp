@@ -31,6 +31,9 @@ int main()  {
             case 7:
                 delStudent(PW);
                 break;
+            case 8:
+                save(PW);
+                break;
         }
     }
    

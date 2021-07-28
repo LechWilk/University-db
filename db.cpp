@@ -1,4 +1,6 @@
 #include"db.hpp"
+#include <fstream>
+
 
 uint8_t interface()    {
     char komenda;
@@ -11,12 +13,13 @@ uint8_t interface()    {
     "5: Sortuj po numerze PESEL"<<'\n'<<
     "6: Sortuj po nazwisku"<<'\n'<<
     "7: Usuń"<<'\n'<<
+    "8: Zapisz do pliku"<<'\n'<<
     "0: Wyjście"<<'\n';
 
     do  {    
         std::cin>>komenda;
         komenda-=48;
-        if(komenda>7) std::cout<<"nie ma takiego numeru....."<<'\n';
+        if(komenda>8) std::cout<<"nie ma takiego numeru....."<<'\n';
         else break;
     } while(1);
 
@@ -50,6 +53,27 @@ void printBreak(int len)    {
     std::cout.width(len);
     std::cout<<'='<<'\n';
     std::cout.fill(' ');
+}
+
+void save(const std::list<student>& db)    {
+    std::string temp_sex;
+    std::ofstream fileDB("University-db.txt");
+    for(const auto &s:db)  {
+        temp_sex=s.isMale() ? "M" : temp_sex=s.isFemale() ? "K" : "";
+
+        fileDB.width(10);
+        fileDB<<std::left<<"|| " +std::to_string(s.getId());
+        fileDB.width(30);
+        fileDB<<"| " +s.getName();
+        fileDB.width(5);
+        fileDB<<"| " +temp_sex;
+        fileDB.width(45);
+        fileDB<<"| " +s.getAddress();
+        fileDB.width(15);
+        fileDB<<"| " +std::to_string(s.getPesel())<<"|";
+        fileDB<<'\n';
+    }
+
 }
 
 void fullFill(std::list<student>& db)   {
