@@ -5,7 +5,9 @@
 uint8_t interface()    {
     char komenda;
     
-    std::cout<<"Menu bazy studentów PW:"<<'\n'<<
+    std::cout<<
+    "***********************"<<'\n'<<
+    "Menu bazy studentów PW:"<<'\n'<<
     "1: Dodaj"<<'\n'<<
     "2: Drukuj bazę"<<'\n'<<
     "3: Wyszukaj po nazwisku"<<'\n'<<
@@ -14,7 +16,8 @@ uint8_t interface()    {
     "6: Sortuj po nazwisku"<<'\n'<<
     "7: Usuń"<<'\n'<<
     "8: Zapisz do pliku"<<'\n'<<
-    "0: Wyjście"<<'\n';
+    "0: Wyjście"<<'\n'<<
+    "***********************"<<'\n';
 
     do  {    
         std::cin>>komenda;
@@ -136,6 +139,23 @@ void serchName(const std::list<student>& db)   {
 
 }
 void serchPesel(const std::list<student>& db)  {
+    long givenPesel;
+    int resoults=0;
+    std::cout<<"Podaj proszę PESEL szukanego studenta. ";
+    std::cin>>givenPesel;
+    std::cout<<"Rezutaty:\n\n";
+
+    for(auto& el:db)    {
+        if(el.getPesel()==givenPesel)   {
+            std::cout<<el.getId()<<'\n';
+            std::cout<<el.getName()<<'\n';
+            std::cout<<el.getAddress()<<'\n'<<'\n';
+            resoults++;
+        }
+    }
+
+    std::cout<<"Znaloziono "<<resoults<<" studentów.\n\n";
+
 
 }
 void sortPesel(std::list<student>& db)   {
