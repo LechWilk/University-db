@@ -117,6 +117,22 @@ void addStudent(std::list<student>& db)  {
 }
 
 void serchName(const std::list<student>& db)   {
+    std::string givenName;
+    int resoults=0;
+    std::cout<<"Podaj proszę nazwisko szukanego studenta. ";
+    std::cin>>givenName;
+    std::cout<<"Rezutaty:\n\n";
+
+    for(auto& el:db)    {
+        if(el.getLastName()==givenName)   {
+            std::cout<<el.getId()<<'\n';
+            std::cout<<el.getName()<<'\n';
+            std::cout<<el.getAddress()<<'\n'<<'\n';
+            resoults++;
+        }
+    }
+
+    std::cout<<"Znaloziono "<<resoults<<" studentów.\n\n";
 
 }
 void serchPesel(const std::list<student>& db)  {

@@ -8,6 +8,10 @@ std::string student::getName()  const {
     return student::fName_+' '+student::lName_;
 }
 
+std::string student::getLastName() const{
+    return student::lName_;
+}
+
 long student::getPesel() const{
     return student::Pesel_;
 }
