@@ -9,6 +9,7 @@ int main()  {
     while(1)    {    
         switch(interface()) {
             case 0:
+                save(PW);            
                 return 0;
             case 1:
                 addStudent(PW);

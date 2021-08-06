@@ -131,7 +131,7 @@ void fullFill(std::list<student>& db)   {
 
 void addStudent(std::list<student>& db)  {
     std::string firstN, lastN, address;
-    char sex;
+    char sex,tn;
     long nrPesel;
     unsigned index;
 
@@ -148,13 +148,31 @@ void addStudent(std::list<student>& db)  {
     
     std::cout<<"PESEL: ";
     std::cin>>nrPesel;
-    
-    std::cout<<"Płeć M/K: ";
-    std::cin>>sex;
 
+    while(!validPesel(nrPesel))    {
+        std::cout<<"Błędny numer PESEL!\nCzy chcesz skorygować? (t/n)\n";
+        std::cin>>tn;
+        if(tn!='t') return;
+        std::cout<<"Podaj nowy PESEL:";
+        std::cin>>nrPesel;
+    }
+    
+    nrPesel%100/10%2==1 ? sex='M' : sex='K';
+    std::cout<<"Płeć: "<<sex<<'\n';
+    
     student newStudent(firstN, lastN, address, nrPesel, db.size()+1, sex);
 
     db.emplace_back(newStudent);    
+}
+
+bool validPesel(long pesel)  {
+long modP=pesel;
+std::array<int,11> p;
+for(int i=10;i>=0;i--)   {
+    p[i]=modP%10;
+    modP=modP/10;
+}
+return (p[0]*1+p[1]*3+p[2]*7+p[3]*9+p[4]*1+p[5]*3+p[6]*7+p[7]*9+p[8]*1+p[9]*3+p[10]*1)%10==0;
 }
 
 void serchName(const std::list<student>& db)   {
