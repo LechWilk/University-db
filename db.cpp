@@ -159,8 +159,12 @@ void addStudent(std::list<student>& db)  {
     
     nrPesel%100/10%2==1 ? sex='M' : sex='K';
     std::cout<<"Płeć: "<<sex<<'\n';
+
+    for(auto& el:db)
+        if (el.getId()>index)
+            index=(el.getId());
     
-    student newStudent(firstN, lastN, address, nrPesel, db.size()+1, sex);
+    student newStudent(firstN, lastN, address, nrPesel, index+1, sex);
 
     db.emplace_back(newStudent);    
 }
@@ -233,5 +237,10 @@ void delStudent(std::list<student>& db)  {
     unsigned id=0;
     std::cout<<"Podaj proszę nr indeksu wykreślanego studenta.";
     std::cin>>id;
-    db.remove_if([id](const student& s){    return s.getId()==id;   });     //WTF?!? Nie kumam tej jebanej składni..
+    int n=0;
+    for(auto& el:db)    if(el.getId()==id) n++;
+    
+    db.remove_if([id](const student& s){    return s.getId()==id;   });     //WTF?!? Nie kumam o co kaman tej składni..
+    
+    std::cout<<"Usunięto "<<n<<" studentów.\n\n";
 }
