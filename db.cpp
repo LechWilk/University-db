@@ -31,14 +31,27 @@ uint8_t interface()    {
 
 void print(const std::list<student>& db)    {
     std::string temp_sex;
-    printBreak(107);
+//framework
+    printBreak(112);
+    std::cout.width(10);
+    std::cout<<std::left<<"|| Index ";
+    std::cout.width(36);
+    std::cout<<"|| Imię i Nazwisko";
+    std::cout.width(5);
+    std::cout<<"||M/K";
+    std::cout.width(45);
+    std::cout<<"|| Adres ";
+    std::cout.width(15);
+    std::cout<<"|| PESEL"<<"||";
+    std::cout<<'\n';
+    printBreak(112);
 
     for(const auto &s:db)  {
         temp_sex=s.isMale() ? "M" : temp_sex=s.isFemale() ? "K" : "";
 
         std::cout.width(10);
         std::cout<<std::left<<"|| " +std::to_string(s.getId());
-        std::cout.width(30);
+        std::cout.width(35);
         std::cout<<"|| " +s.getName();
         std::cout.width(5);
         std::cout<<"|| " +temp_sex;
@@ -48,7 +61,7 @@ void print(const std::list<student>& db)    {
         std::cout<<"|| " +std::to_string(s.getPesel())<<"||";
         std::cout<<'\n';
     }
-    printBreak(107);
+    printBreak(112);
 }
 
 void printBreak(int len)    {
@@ -117,6 +130,7 @@ void load(std::list<student>& db)   {
     }
 }
 
+//initial full fillment
 void fullFill(std::list<student>& db)   {
 
     db.emplace_back(student("Jan","Kapela",12345));

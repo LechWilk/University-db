@@ -9,6 +9,8 @@ CMakeFiles/University-db-ut.dir/student.cpp.o
  /home/leszol/CS/University-db/student.cpp
  /home/leszol/CS/University-db/student.hpp
 CMakeFiles/University-db-ut.dir/test.cpp.o
+ /home/leszol/CS/University-db/db.hpp
+ /home/leszol/CS/University-db/student.hpp
  /home/leszol/CS/University-db/test.cpp
  googletest-src/googletest/include/gtest/gtest-death-test.h
  googletest-src/googletest/include/gtest/gtest-matchers.h
