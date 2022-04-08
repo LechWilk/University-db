@@ -1,17 +1,16 @@
-8	Bosak	Krzysztof	M	ul. Polska 777	84548412345
-12	Brzechwa	Jan	M	Lokomotywy 11	70082423716
-11	Brzeczyszczykiewicz	Grzegorz	M	Chrzaszczyrzobrzeszyce powiat Lekolowy	62111781418
-14	Grey	Sasha	K	lodowa 25	90101027389
-15	Jackson	Michael	M	Księżycowa 44	74030741211
-7	Kaczynski	Jaroslaw	M	ul. Nowogrodzka 84/86, 02-018 Warszawa	49061812345
-5555	Konieczny	Fill			0
-3333	Mentzen	Slawomir			0
-8888	Pawlowicz	Krystyna	K	Warszawa, ul. Srebrna 77	35082051497
-10	Schwartzeneger	Arnold	M	Holywood 33	67011267552
-13	Sklodowska	Maria	K	Jadrowa 876	251642532
-9978	Zandberg	Adrian	M	Warszawa, ul. Krysztalowa 6	81033074987
-9979	Merkel	Angela	K	Niemiecka straBe 88	49040779422
 9980	Kopernik	Mikolaj	M	Sloneczna 77	10481394
+13	Sklodowska	Maria	K	Jadrowa 876	251642532
+8888	Pawlowicz	Krystyna	K	Warszawa, ul. Srebrna 77	35082051497
 9981	Streisand	Barbara	K	Holywood 123	42042425889
-9982	Duda	Andrzej	M	Krakowskie Przemiescie 1	49100771799
 9983	Korwin-Mikke	Janusz	M	Piekna 3/8	48011721497
+9979	Merkel	Angela	K	Niemiecka straBe 88	49040779422
+7	Kaczynski	Jaroslaw	M	ul. Nowogrodzka 84/86, 02-018 Warszawa	49061812345
+9982	Duda	Andrzej	M	Krakowskie Przemiescie 1	49100771799
+11	Brzeczyszczykiewicz	Grzegorz	M	Chrzaszczyrzobrzeszyce powiat Lekolowy	62111781418
+10	Schwartzeneger	Arnold	M	Holywood 33	67011267552
+12	Brzechwa	Jan	M	Lokomotywy 11	70082423716
+9978	Zandberg	Adrian	M	Warszawa, ul. Krysztalowa 6	81033074987
+8	Bosak	Krzysztof	M	ul. Polska 777	84548412345
+14	Grey	Sasha	K	lodowa 25	90101027389
+9984	Jackson	Michael	M	Księżycowa 44	74030741211
+9985	Jackson	Michael	M	Ksiezycowa 44	74030741211
