@@ -21,11 +21,11 @@ long person::getPesel() const{
 }
 
 bool person::isMale()  const{
-    if(person::sex_=='M') return true;
+    if(person::sex_==male) return true;
     return false;
 }
 
 bool person::isFemale()  const{
-    if(person::sex_=='K') return true;
+    if(person::sex_==female) return true;
     return false;
 }
