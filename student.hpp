@@ -1,27 +1,18 @@
 #include<string>
+#include"person.hpp"
 
-class student   {
-    std::string fName_;
-    std::string lName_;
-    std::string address_;
-    long Pesel_;
-    unsigned Id_;
-    char sex_;   
-
+class Student   : public Person {
     public:
-        student(const std::string fName, const std::string lName, std::string address, long Pesel, const unsigned Id, char sex)
-        :   fName_(fName), lName_(lName), address_(address), Pesel_(Pesel), Id_(Id), sex_(sex)
+        Student(const std::string fName, const std::string lName, std::string address, long pesel, const unsigned id, char sex)
+        :   Person(fName,lName,address,pesel,sex)
+        ,   id_(id)
+        ,   function(student)
         {}
-        student(const std::string fName, const std::string lName, const unsigned Id)
-        :   student(fName, lName, "", 0, Id, 'X')
+        Student(const std::string fName, const std::string lName, const unsigned id)
+        :   student(fName, lName, "", 0, id, none)
         {}
-        std::string getName() const;
-        std::string getAddress() const;
-        std::string getLastName() const;
-        std::string getFirstName() const;
-        unsigned getId() const;
-        long getPesel() const;
-        bool isMale() const;
-        bool isFemale() const;
-
+        unsigned getId() const {return id_}
+ 
+    private:
+        unsigned id_;
 };
