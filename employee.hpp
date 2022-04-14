@@ -1,18 +1,20 @@
-#include "student.hpp"
+#include "person.hpp"
 
-class Emplyee   : public student {
-
-    float salary_;   
-    static char function = 'E'; 
+class Emplyee   : public Person {
 
     public:
-        Employee (const std::string fName, const std::string lName, std::string address, long Pesel, char sex)
-        :   fName_(fName), lName_(lName), address_(address), Pesel_(Pesel), sex_(sex)
+        Employee (const std::string fName, const std::string lName, std::string address, long pesel, char sex, float salary)
+        :   Person (fName, lName, address, pesel, sex)
+        ,   salary_(salary)
         {}
+        
         Employee (const std::string fName, const std::string lName)
-        :   Employee(fName, lName, "", 0, 'X')
+        :   Employee(fName, lName, "", 0, 0, 0)
         {}
 
-        float getSalary() const;
-        
+        float getSalary() const {return salary_};
+
+    private:
+        float salary_;   
+    
 };
