@@ -6,11 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/home/leszol/CS/University-db/person.cpp
+/home/leszol/CS/University-db/db.cpp
+db.hpp
+/home/leszol/CS/University-db/db.hpp
+employee.hpp
+/home/leszol/CS/University-db/employee.hpp
+student.hpp
+/home/leszol/CS/University-db/student.hpp
+fstream
+-
+
+/home/leszol/CS/University-db/db.hpp
+iostream
+-
+list
+-
+array
+-
 person.hpp
 /home/leszol/CS/University-db/person.hpp
+
+/home/leszol/CS/University-db/employee.hpp
 
 /home/leszol/CS/University-db/person.hpp
 string
 -
+
+/home/leszol/CS/University-db/student.hpp
 

@@ -3,6 +3,7 @@
 
 CMakeFiles/University-db-ut.dir/db.cpp.o: ../db.cpp
 CMakeFiles/University-db-ut.dir/db.cpp.o: ../db.hpp
+CMakeFiles/University-db-ut.dir/db.cpp.o: ../employee.hpp
 CMakeFiles/University-db-ut.dir/db.cpp.o: ../person.hpp
 CMakeFiles/University-db-ut.dir/db.cpp.o: ../student.hpp
 
@@ -11,7 +12,6 @@ CMakeFiles/University-db-ut.dir/person.cpp.o: ../person.hpp
 
 CMakeFiles/University-db-ut.dir/test.cpp.o: ../db.hpp
 CMakeFiles/University-db-ut.dir/test.cpp.o: ../person.hpp
-CMakeFiles/University-db-ut.dir/test.cpp.o: ../student.hpp
 CMakeFiles/University-db-ut.dir/test.cpp.o: ../test.cpp
 CMakeFiles/University-db-ut.dir/test.cpp.o: googletest-src/googletest/include/gtest/gtest-death-test.h
 CMakeFiles/University-db-ut.dir/test.cpp.o: googletest-src/googletest/include/gtest/gtest-matchers.h

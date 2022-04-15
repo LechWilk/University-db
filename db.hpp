@@ -1,21 +1,25 @@
 #include<iostream>
 #include<list>
 #include<array>
-#include"student.hpp"
+#include"person.hpp"
 
-uint8_t interface();
-void print(const std::list<Student>& db);
-void save(const std::list<Student>& db);
-void load(std::list<Student>& db);
-void fullFill(std::list<Student>& db);
-void addStudent(std::list<Student>& db);
-void serchName(const std::list<Student>& db);
-void serchPesel(const std::list<Student>& db);
-void sortPesel(std::list<Student>& db);
-void sortName(std::list<Student>& db);
-void delStudent(std::list<Student>& db);
+char interface();
+
+void addStudent(std::list<Person*>& db);
+void addEmployee(std::list<Person*>& db);
+
+
+void print(const std::list<Person*>& db);
+void save(const std::list<Person*>& db);
+void load(std::list<Person*>& db);
+//void fullFill(std::list<Person*>& db);
+void serchName(const std::list<Person*>& db);
+void serchPesel(const std::list<Person*>& db);
+void sortPesel(std::list<Person*>& db);
+void sortName(std::list<Person*>& db);
+void delStudent(std::list<Person*>& db);
 void printBreak(int);
 
-bool compPesel(const Student& s1, const Student& s2);
-bool compName(const Student& s1, const Student& s2);
+bool compPesel(const Person*& s1, const Person*& s2);
+bool compName(const Person*& s1, const Person*& s2);
 bool validPesel(long);

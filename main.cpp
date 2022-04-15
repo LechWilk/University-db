@@ -4,36 +4,50 @@
 
 int main()  {
 
-    std::list<Student> PW;
+    std::list<Person*> PW;
+
     load(PW);
     while(1)    {    
         switch(interface()) {
-            case 0:
-                save(PW);            
+            case 'x':
                 return 0;
-            case 1:
+            case 'a':
                 addStudent(PW);
                 break;
-            case 2:
-                print(PW);
+            case 'b':
+                addEmpoyee(PW);
                 break;
-            case 3:
-                serchName(PW);
-                break;
-            case 4:
-                serchPesel(PW);
-                break;
-            case 5:
-                sortPesel(PW);
-                break;
-            case 6:
-                sortName(PW);
-                break;
-            case 7:
+            case 'c':
                 delStudent(PW);
                 break;
-            case 8:
+            case 'd':
+                delEmployee(PW);
+                break;
+            case 'e':
+                serchName(PW);
+                break;
+            case 'f':
+                serchPesel(PW);
+                break;                
+            case 'g':
+                print(PW);
+                break;
+            case 'h':
+                sortPesel(PW);
+                print(PW);
+                break;
+            case 'i':
+                sortName(PW);
+                print(PW);
+                break;
+            case 'j':
+                sortSalary(PW);
+                print(PW);
+                break;
+            case 'k':
                 save(PW);
+                break;
+            default:
                 break;
         }
     }

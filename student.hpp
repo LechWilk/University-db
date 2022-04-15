@@ -1,5 +1,4 @@
-#include<string>
-#include"person.hpp"
+//#include"person.hpp"
 
 class Student   : public Person {
     public:
