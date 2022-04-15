@@ -4,7 +4,7 @@
 
 int main()  {
 
-    std::list<student> PW;
+    std::list<Student> PW;
     load(PW);
     while(1)    {    
         switch(interface()) {

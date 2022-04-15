@@ -1,31 +1,31 @@
 #include"person.hpp"
 
-std::string person::getAddress()   const {
-    return person::address_;
+std::string Person::getAddress()   const {
+    return Person::address_;
 }
 
-std::string person::getName()  const {
-    return person::fName_+' '+person::lName_;
+std::string Person::getName()  const {
+    return Person::fName_+' '+Person::lName_;
 }
 
-std::string person::getLastName() const{
-    return person::lName_;
+std::string Person::getLastName() const{
+    return Person::lName_;
 }
 
-std::string person::getFirstName() const{
-    return person::fName_;
+std::string Person::getFirstName() const{
+    return Person::fName_;
 }
 
-long person::getPesel() const{
-    return person::Pesel_;
+long Person::getPesel() const{
+    return Person::pesel_;
 }
 
-bool person::isMale()  const{
-    if(person::sex_==male) return true;
+bool Person::isMale()  const{
+    if(Person::sex_==Sex::male) return true;
     return false;
 }
 
-bool person::isFemale()  const{
-    if(person::sex_==female) return true;
+bool Person::isFemale()  const{
+    if(Person::sex_==Sex::female) return true;
     return false;
 }

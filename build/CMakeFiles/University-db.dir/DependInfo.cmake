@@ -6,7 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/leszol/CS/University-db/db.cpp" "/home/leszol/CS/University-db/build/CMakeFiles/University-db.dir/db.cpp.o"
   "/home/leszol/CS/University-db/main.cpp" "/home/leszol/CS/University-db/build/CMakeFiles/University-db.dir/main.cpp.o"
-  "/home/leszol/CS/University-db/student.cpp" "/home/leszol/CS/University-db/build/CMakeFiles/University-db.dir/student.cpp.o"
+  "/home/leszol/CS/University-db/person.cpp" "/home/leszol/CS/University-db/build/CMakeFiles/University-db.dir/person.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

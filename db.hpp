@@ -4,18 +4,18 @@
 #include"student.hpp"
 
 uint8_t interface();
-void print(const std::list<student>& db);
-void save(const std::list<student>& db);
-void load(std::list<student>& db);
-void fullFill(std::list<student>& db);
-void addStudent(std::list<student>& db);
-void serchName(const std::list<student>& db);
-void serchPesel(const std::list<student>& db);
-void sortPesel(std::list<student>& db);
-void sortName(std::list<student>& db);
-void delStudent(std::list<student>& db);
+void print(const std::list<Student>& db);
+void save(const std::list<Student>& db);
+void load(std::list<Student>& db);
+void fullFill(std::list<Student>& db);
+void addStudent(std::list<Student>& db);
+void serchName(const std::list<Student>& db);
+void serchPesel(const std::list<Student>& db);
+void sortPesel(std::list<Student>& db);
+void sortName(std::list<Student>& db);
+void delStudent(std::list<Student>& db);
 void printBreak(int);
 
-bool compPesel(const student& s1, const student& s2);
-bool compName(const student& s1, const student& s2);
+bool compPesel(const Student& s1, const Student& s2);
+bool compName(const Student& s1, const Student& s2);
 bool validPesel(long);

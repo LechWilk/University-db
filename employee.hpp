@@ -3,7 +3,7 @@
 class Emplyee   : public Person {
 
     public:
-        Employee (const std::string fName, const std::string lName, std::string address, long pesel, char sex, float salary)
+        Employee (const std::string fName, const std::string lName, std::string address, long pesel, Person::Sex sex, float salary)
         :   Person (fName, lName, address, pesel, sex)
         ,   salary_(salary)
         ,   function(employee)

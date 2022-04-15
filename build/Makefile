@@ -302,35 +302,35 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/University-db.dir/build.make CMakeFiles/University-db.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-student.o: student.cpp.o
+person.o: person.cpp.o
 
-.PHONY : student.o
+.PHONY : person.o
 
 # target to build an object file
-student.cpp.o:
-	$(MAKE) -f CMakeFiles/University-db-ut.dir/build.make CMakeFiles/University-db-ut.dir/student.cpp.o
-	$(MAKE) -f CMakeFiles/University-db.dir/build.make CMakeFiles/University-db.dir/student.cpp.o
-.PHONY : student.cpp.o
+person.cpp.o:
+	$(MAKE) -f CMakeFiles/University-db-ut.dir/build.make CMakeFiles/University-db-ut.dir/person.cpp.o
+	$(MAKE) -f CMakeFiles/University-db.dir/build.make CMakeFiles/University-db.dir/person.cpp.o
+.PHONY : person.cpp.o
 
-student.i: student.cpp.i
+person.i: person.cpp.i
 
-.PHONY : student.i
+.PHONY : person.i
 
 # target to preprocess a source file
-student.cpp.i:
-	$(MAKE) -f CMakeFiles/University-db-ut.dir/build.make CMakeFiles/University-db-ut.dir/student.cpp.i
-	$(MAKE) -f CMakeFiles/University-db.dir/build.make CMakeFiles/University-db.dir/student.cpp.i
-.PHONY : student.cpp.i
+person.cpp.i:
+	$(MAKE) -f CMakeFiles/University-db-ut.dir/build.make CMakeFiles/University-db-ut.dir/person.cpp.i
+	$(MAKE) -f CMakeFiles/University-db.dir/build.make CMakeFiles/University-db.dir/person.cpp.i
+.PHONY : person.cpp.i
 
-student.s: student.cpp.s
+person.s: person.cpp.s
 
-.PHONY : student.s
+.PHONY : person.s
 
 # target to generate assembly for a file
-student.cpp.s:
-	$(MAKE) -f CMakeFiles/University-db-ut.dir/build.make CMakeFiles/University-db-ut.dir/student.cpp.s
-	$(MAKE) -f CMakeFiles/University-db.dir/build.make CMakeFiles/University-db.dir/student.cpp.s
-.PHONY : student.cpp.s
+person.cpp.s:
+	$(MAKE) -f CMakeFiles/University-db-ut.dir/build.make CMakeFiles/University-db-ut.dir/person.cpp.s
+	$(MAKE) -f CMakeFiles/University-db.dir/build.make CMakeFiles/University-db.dir/person.cpp.s
+.PHONY : person.cpp.s
 
 test.o: test.cpp.o
 
@@ -384,9 +384,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... student.o"
-	@echo "... student.i"
-	@echo "... student.s"
+	@echo "... person.o"
+	@echo "... person.i"
+	@echo "... person.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

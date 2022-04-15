@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/leszol/CS/University-db/db.cpp
-db.hpp
-/home/leszol/CS/University-db/db.hpp
-fstream
--
-
 /home/leszol/CS/University-db/db.hpp
 iostream
 -
@@ -22,7 +16,19 @@ array
 student.hpp
 /home/leszol/CS/University-db/student.hpp
 
+/home/leszol/CS/University-db/main.cpp
+db.hpp
+/home/leszol/CS/University-db/db.hpp
+list
+-
+
+/home/leszol/CS/University-db/person.hpp
+string
+-
+
 /home/leszol/CS/University-db/student.hpp
 string
 -
+person.hpp
+/home/leszol/CS/University-db/person.hpp
 

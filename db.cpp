@@ -7,7 +7,7 @@ uint8_t interface()    {
     
     std::cout<<
     "***********************"<<'\n'<<
-    "Menu bazy studentów PW:"<<'\n'<<
+    "Menu bazy Studentów PW:"<<'\n'<<
     "1: Dodaj"<<'\n'<<
     "2: Drukuj bazę"<<'\n'<<
     "3: Wyszukaj po nazwisku"<<'\n'<<
@@ -29,7 +29,7 @@ uint8_t interface()    {
     return komenda;
 }
 
-void print(const std::list<student>& db)    {
+void print(const std::list<Student>& db)    {
     std::string temp_sex;
 //framework
     printBreak(112);
@@ -46,7 +46,7 @@ void print(const std::list<student>& db)    {
     std::cout<<'\n';
     printBreak(112);
 
-    for(const auto &s:db)  {
+    for(const Student &s:db)  {
         temp_sex=s.isMale() ? "M" : temp_sex=s.isFemale() ? "K" : "";
 
         std::cout.width(10);
@@ -71,7 +71,7 @@ void printBreak(int len)    {
     std::cout.fill(' ');
 }
 
-void save(const std::list<student>& db)    {
+void save(const std::list<Student>& db)    {
     std::string temp_sex;
     std::ofstream fileDB("University-db.txt");
     for(const auto &s:db)  {
@@ -88,7 +88,7 @@ void save(const std::list<student>& db)    {
 
 }
 
-void load(std::list<student>& db)   {
+void load(std::list<Student>& db)   {
     std::ifstream fileDB("University-db.txt");
     std::string lineDB;
     std::string firstN, lastN, address;
@@ -124,26 +124,26 @@ void load(std::list<student>& db)   {
      
         nrPesel=std::stol(lineDB.substr(pos+1));
 
-        student newStudent(firstN, lastN, address, nrPesel, index, sex);
+        Student newStudent(firstN, lastN, address, nrPesel, index, sex);
         db.emplace_back(newStudent);
 
     }
 }
 
 //initial full fillment
-void fullFill(std::list<student>& db)   {
+void fullFill(std::list<Student>& db)   {
 
-    db.emplace_back(student("Jan","Kapela",12345));
-    db.emplace_back(student("Cezary","Graf",24680));
-    db.emplace_back(student("Rafal","Zaorski",97531));
-    db.emplace_back(student("Slawomir","Mentzen",33333));
-    db.emplace_back(student("Fill","Konieczny",55555));
-    db.emplace_back(student("Andrzej","Duda","Warszawa, al.Krakowskie Przedmiescie 1",75124534987,11111,'M'));
-    db.emplace_back(student("Adrian","Zandberg","Warszawa, ul. Krysztalowa 6",81033074987,99789,'M'));
-    db.emplace_back(student("Krystyna","Pawlowicz","Warszawa, ul. Srebrna 77",35082051497,88888,'K'));
+    db.emplace_back(Student("Jan","Kapela",12345));
+    db.emplace_back(Student("Cezary","Graf",24680));
+    db.emplace_back(Student("Rafal","Zaorski",97531));
+    db.emplace_back(Student("Slawomir","Mentzen",33333));
+    db.emplace_back(Student("Fill","Konieczny",55555));
+    db.emplace_back(Student("Andrzej","Duda","Warszawa, al.Krakowskie Przedmiescie 1",75124534987,11111,'M'));
+    db.emplace_back(Student("Adrian","Zandberg","Warszawa, ul. Krysztalowa 6",81033074987,99789,'M'));
+    db.emplace_back(Student("Krystyna","Pawlowicz","Warszawa, ul. Srebrna 77",35082051497,88888,'K'));
 }
 
-void addStudent(std::list<student>& db)  {
+void addStudent(std::list<Student>& db)  {
     std::string firstN, lastN, address;
     char sex,tn;
     long nrPesel;
@@ -178,7 +178,7 @@ void addStudent(std::list<student>& db)  {
         if (el.getId()>index)
             index=(el.getId());
     
-    student newStudent(firstN, lastN, address, nrPesel, index+1, sex);
+    Student newStudent(firstN, lastN, address, nrPesel, index+1, sex);
 
     db.emplace_back(newStudent);    
 }
@@ -193,10 +193,10 @@ for(int i=10;i>=0;i--)   {
 return (p[0]*1+p[1]*3+p[2]*7+p[3]*9+p[4]*1+p[5]*3+p[6]*7+p[7]*9+p[8]*1+p[9]*3+p[10]*1)%10==0;
 }
 
-void serchName(const std::list<student>& db)   {
+void serchName(const std::list<Student>& db)   {
     std::string givenName;
     int resoults=0;
-    std::cout<<"Podaj proszę nazwisko szukanego studenta. ";
+    std::cout<<"Podaj proszę nazwisko szukanego Studenta. ";
     std::cin>>givenName;
     std::cout<<"Rezutaty:\n\n";
 
@@ -209,13 +209,13 @@ void serchName(const std::list<student>& db)   {
         }
     }
 
-    std::cout<<"Znaloziono "<<resoults<<" studentów.\n\n";
+    std::cout<<"Znaloziono "<<resoults<<" Studentów.\n\n";
 
 }
-void serchPesel(const std::list<student>& db)  {
+void serchPesel(const std::list<Student>& db)  {
     long givenPesel;
     int resoults=0;
-    std::cout<<"Podaj proszę PESEL szukanego studenta. ";
+    std::cout<<"Podaj proszę PESEL szukanego Studenta. ";
     std::cin>>givenPesel;
     std::cout<<"Rezutaty:\n\n";
 
@@ -228,33 +228,33 @@ void serchPesel(const std::list<student>& db)  {
         }
     }
 
-    std::cout<<"Znaloziono "<<resoults<<" studentów.\n\n";
+    std::cout<<"Znaloziono "<<resoults<<" Studentów.\n\n";
 
 }
 
-bool compPesel(const student& s1, const student& s2)  {
+bool compPesel(const Student& s1, const Student& s2)  {
     return s1.getPesel()<s2.getPesel();
 }
 
-bool compName(const student& s1, const student& s2)  {
+bool compName(const Student& s1, const Student& s2)  {
     return std::lexicographical_compare(s1.getLastName().begin(), s1.getLastName().end(),s2.getLastName().begin(),s2.getLastName().end());
 }
 
-void sortPesel(std::list<student>& db)   {
+void sortPesel(std::list<Student>& db)   {
     db.sort(compPesel);
 }
-void sortName(std::list<student>& db)    {
+void sortName(std::list<Student>& db)    {
     db.sort(compName);
 }
 
-void delStudent(std::list<student>& db)  {
+void delStudent(std::list<Student>& db)  {
     unsigned id=0;
-    std::cout<<"Podaj proszę nr indeksu wykreślanego studenta.";
+    std::cout<<"Podaj proszę nr indeksu wykreślanego Studenta.";
     std::cin>>id;
     int n=0;
     for(auto& el:db)    if(el.getId()==id) n++;
     
-    db.remove_if([id](const student& s){    return s.getId()==id;   });     //WTF?!? Nie kumam o co kaman tej składni..
+    db.remove_if([id](const Student& s){    return s.getId()==id;   });     //WTF?!? Nie kumam o co kaman tej składni..
     
-    std::cout<<"Usunięto "<<n<<" studentów.\n\n";
+    std::cout<<"Usunięto "<<n<<" Studentów.\n\n";
 }

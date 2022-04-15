@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/University-db.dir/db.cpp.o"
   "CMakeFiles/University-db.dir/main.cpp.o"
-  "CMakeFiles/University-db.dir/student.cpp.o"
+  "CMakeFiles/University-db.dir/person.cpp.o"
   "University-db"
   "University-db.pdb"
 )

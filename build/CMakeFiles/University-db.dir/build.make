@@ -83,31 +83,31 @@ CMakeFiles/University-db.dir/db.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/University-db.dir/db.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leszol/CS/University-db/db.cpp -o CMakeFiles/University-db.dir/db.cpp.s
 
-CMakeFiles/University-db.dir/student.cpp.o: CMakeFiles/University-db.dir/flags.make
-CMakeFiles/University-db.dir/student.cpp.o: ../student.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leszol/CS/University-db/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/University-db.dir/student.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/University-db.dir/student.cpp.o -c /home/leszol/CS/University-db/student.cpp
+CMakeFiles/University-db.dir/person.cpp.o: CMakeFiles/University-db.dir/flags.make
+CMakeFiles/University-db.dir/person.cpp.o: ../person.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leszol/CS/University-db/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/University-db.dir/person.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/University-db.dir/person.cpp.o -c /home/leszol/CS/University-db/person.cpp
 
-CMakeFiles/University-db.dir/student.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/University-db.dir/student.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leszol/CS/University-db/student.cpp > CMakeFiles/University-db.dir/student.cpp.i
+CMakeFiles/University-db.dir/person.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/University-db.dir/person.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leszol/CS/University-db/person.cpp > CMakeFiles/University-db.dir/person.cpp.i
 
-CMakeFiles/University-db.dir/student.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/University-db.dir/student.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leszol/CS/University-db/student.cpp -o CMakeFiles/University-db.dir/student.cpp.s
+CMakeFiles/University-db.dir/person.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/University-db.dir/person.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leszol/CS/University-db/person.cpp -o CMakeFiles/University-db.dir/person.cpp.s
 
 # Object files for target University-db
 University__db_OBJECTS = \
 "CMakeFiles/University-db.dir/main.cpp.o" \
 "CMakeFiles/University-db.dir/db.cpp.o" \
-"CMakeFiles/University-db.dir/student.cpp.o"
+"CMakeFiles/University-db.dir/person.cpp.o"
 
 # External object files for target University-db
 University__db_EXTERNAL_OBJECTS =
 
 University-db: CMakeFiles/University-db.dir/main.cpp.o
 University-db: CMakeFiles/University-db.dir/db.cpp.o
-University-db: CMakeFiles/University-db.dir/student.cpp.o
+University-db: CMakeFiles/University-db.dir/person.cpp.o
 University-db: CMakeFiles/University-db.dir/build.make
 University-db: CMakeFiles/University-db.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leszol/CS/University-db/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable University-db"

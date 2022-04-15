@@ -4,12 +4,14 @@
 CMakeFiles/University-db-ut.dir/db.cpp.o
  /home/leszol/CS/University-db/db.cpp
  /home/leszol/CS/University-db/db.hpp
+ /home/leszol/CS/University-db/person.hpp
  /home/leszol/CS/University-db/student.hpp
-CMakeFiles/University-db-ut.dir/student.cpp.o
- /home/leszol/CS/University-db/student.cpp
- /home/leszol/CS/University-db/student.hpp
+CMakeFiles/University-db-ut.dir/person.cpp.o
+ /home/leszol/CS/University-db/person.cpp
+ /home/leszol/CS/University-db/person.hpp
 CMakeFiles/University-db-ut.dir/test.cpp.o
  /home/leszol/CS/University-db/db.hpp
+ /home/leszol/CS/University-db/person.hpp
  /home/leszol/CS/University-db/student.hpp
  /home/leszol/CS/University-db/test.cpp
  googletest-src/googletest/include/gtest/gtest-death-test.h
