@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/Univerity-db-ut.dir/test.cpp.o CMakeFiles/Univerity-db-ut.dir/db.cpp.o CMakeFiles/Univerity-db-ut.dir/student.cpp.o  -o Univerity-db-ut  lib/libgtest_main.a lib/libgtest.a -lpthread 

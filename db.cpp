@@ -138,7 +138,7 @@ void print(const std::list<Person*>& db)    {
 
         std::cout.width(10);
 
-        if (Person::function==Person::Engagement::student)
+        if (s->function==Person::Engagement::student)
             std::cout<<std::left<<"|| " +std::to_string(s->getId());
         
         std::cout.width(35);
@@ -151,7 +151,7 @@ void print(const std::list<Person*>& db)    {
         std::cout<<"|| " +std::to_string(s->getPesel())<<"||";
         std::cout.width(15);
         
-        if (Person::function==Person::Engagement::employee)
+        if (s->function==Person::Engagement::employee)
             std::cout<<"|| " +std::to_string(s->getSalary())<<"||";
 
         std::cout<<'\n';
@@ -220,7 +220,7 @@ void load(std::list<Person*>& db)   {
         nrPesel=std::stol(lineDB.substr(pos+1));
 
         Student newStudent(firstN, lastN, address, nrPesel, index, sex);
-        db.emplace_back(*newStudent);
+        db.emplace_back(&newStudent);
 
     }
 }

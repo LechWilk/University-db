@@ -10,7 +10,9 @@ class Person    {
         long getPesel() const;
         bool isMale() const;
         bool isFemale() const;
-        
+        virtual unsigned getId() const = 0;
+        virtual float getSalary() const = 0;
+
         enum class Engagement   {
             none,
             student,
@@ -23,7 +25,7 @@ class Person    {
             female
         };
 
-        Person(const std::string fName, const std::string lName, std::string address, long pesel, Person::Sex sex)
+        Person(const std::string fName, const std::string lName, std::string address, long pesel, Sex sex)
         :   fName_(fName)
         ,   lName_(lName)
         ,   address_(address)

@@ -9,7 +9,9 @@ class Student   : public Person {
         Student(const std::string fName, const std::string lName, const unsigned id)
         :   Student(fName, lName, "", 0, id, ' ')
         {}
-        unsigned getId() const {return id_;}
+        
+        float getSalary() const override {return 0;};
+        unsigned getId() const override {return id_;}
  
         static const Engagement function = Engagement::student;
 

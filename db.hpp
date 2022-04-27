@@ -20,6 +20,6 @@ void sortName(std::list<Person*>& db);
 void delStudent(std::list<Person*>& db);
 void printBreak(int);
 
-bool compPesel(const Person*& s1, const Person*& s2);
-bool compName(const Person*& s1, const Person*& s2);
+bool compPesel(const Person* s1, const Person* s2);
+bool compName(const Person* s1, const Person* s2);
 bool validPesel(long);

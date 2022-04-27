@@ -12,7 +12,8 @@ class Employee   : public Person {
         :   Employee(fName, lName, "", 0, ' ', 0)
         {}
 
-        float getSalary() const {return salary_;};
+        float getSalary() const override {return salary_;};
+        unsigned getId() const override {return 0;};
 
         static const Engagement function = Engagement::employee;
 

@@ -3,13 +3,13 @@
 
 CMakeFiles/University-db.dir/db.cpp.o: ../db.cpp
 CMakeFiles/University-db.dir/db.cpp.o: ../db.hpp
+CMakeFiles/University-db.dir/db.cpp.o: ../employee.hpp
 CMakeFiles/University-db.dir/db.cpp.o: ../person.hpp
 CMakeFiles/University-db.dir/db.cpp.o: ../student.hpp
 
 CMakeFiles/University-db.dir/main.cpp.o: ../db.hpp
 CMakeFiles/University-db.dir/main.cpp.o: ../main.cpp
 CMakeFiles/University-db.dir/main.cpp.o: ../person.hpp
-CMakeFiles/University-db.dir/main.cpp.o: ../student.hpp
 
 CMakeFiles/University-db.dir/person.cpp.o: ../person.cpp
 CMakeFiles/University-db.dir/person.cpp.o: ../person.hpp
