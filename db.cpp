@@ -8,7 +8,7 @@ char interface()    {
     
     std::cout<<
     "***********************"<<'\n'<<
-    "Menu bazy Studentów i Pracownikół PW:"<<'\n'<<
+    "Menu bazy Studentów i Pracowników PW:"<<'\n'<<
     "a: Dodaj studenta"<<'\n'<<
     "b: Dodaj pracownika"<<'\n'<<
     "c: Usuń studenta po indexie"<<'\n'<<
@@ -33,7 +33,7 @@ void addStudent(std::list<Person*>& db)  {
     std::string firstN, lastN, address;
     char sex,tn;
     long nrPesel;
-    unsigned index;
+    unsigned index=100001;
 
     std::cin.get();
 
@@ -50,7 +50,7 @@ void addStudent(std::list<Person*>& db)  {
     std::cin>>nrPesel;
 
     while(!validPesel(nrPesel))    {
-        std::cout<<"Błędny numer PESEL!\nCzy chcesz skorygować? (t/n)\n";
+        std::cout<<"Błędny numer PESEL!\nCzy chcesz skorygować? (t) Anuluj (n)\n";
         std::cin>>tn;
         if(tn!='t') return;
         std::cout<<"Podaj nowy PESEL:";
@@ -98,7 +98,7 @@ void addEmployee(std::list<Person*>& db)  {
     std::cin>>salary;
 
     while(!validPesel(nrPesel))    {
-        std::cout<<"Błędny numer PESEL!\nCzy chcesz skorygować? (t/n)\n";
+        std::cout<<"Błędny numer PESEL!\nCzy chcesz skorygować? (t) Anuluj (n)\n";
         std::cin>>tn;
         if(tn!='t') return;
         std::cout<<"Podaj nowy PESEL:";
@@ -109,7 +109,8 @@ void addEmployee(std::list<Person*>& db)  {
     std::cout<<"Płeć: "<<sex<<'\n';
 
     Person *newEmployee = new Employee(firstN, lastN, address, nrPesel, sex, salary);
-
+    //Employee *newEmployee = new Employee(firstN, lastN, address, nrPesel, sex, salary);
+ 
     db.emplace_back(newEmployee);    
 }
 
@@ -181,7 +182,7 @@ void save(const std::list<Person*>& db)    {
         s->getFirstName()<<'\t'<<
         temp_sex<<'\t'<<
         s->getAddress()<<'\t'<<
-        std::to_string(s->getPesel())<<'\n';
+        std::to_string(s->getPesel())<<'\t'<<std::to_string(s->getSalary())<<'\n';
     }
 
 }
@@ -193,6 +194,7 @@ void load(std::list<Person*>& db)   {
     char sex;
     long nrPesel;
     unsigned index;
+    float salary;
 
     int ppos,pos;
     while(1)    {
@@ -219,11 +221,20 @@ void load(std::list<Person*>& db)   {
         ppos=pos;
         pos = lineDB.find('\t',pos+1);
         address=lineDB.substr(ppos+1,pos-ppos-1);
-     
-        nrPesel=std::stol(lineDB.substr(pos+1));
 
-        Student newStudent(firstN, lastN, address, nrPesel, index, sex);
-        db.emplace_back(&newStudent);
+        ppos=pos;
+        pos = lineDB.find('\t',pos+1);
+        nrPesel=std::stol(lineDB.substr(ppos+1,pos-ppos-1));
+
+        salary =std::stof(lineDB.substr(pos+1));
+
+        Person *newPerson;
+
+        if (index != 0)
+            newPerson = new Student(firstN, lastN, address, nrPesel, index, sex);
+            else newPerson = new Employee(firstN, lastN, address, nrPesel, sex, salary);
+        db.emplace_back(newPerson);
+        std::cout<<"Dodałem człowieka "<<lastN<<'\t'<<"ID:"<<index<<'\t'<<static_cast<int>(newPerson->engagement)<<'\n';
 
     }
 }
