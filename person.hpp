@@ -37,7 +37,7 @@ class Person    {
         :   Person(fName,lName,"",0,Sex::none)
         {}
 
-        static const Engagement function;
+        const Engagement engagement = Engagement::none;
 
 
     private:

@@ -69,6 +69,7 @@ void addStudent(std::list<Person*>& db)  {
     db.emplace_back(newStudent);    
 }
 
+
 //==============================================================================================
 
 //  b
@@ -127,7 +128,7 @@ void print(const std::list<Person*>& db)    {
     std::cout.width(45);
     std::cout<<"|| Adres ";
     std::cout.width(15);
-    std::cout<<"|| PESEL"<<"||";
+    std::cout<<"|| PESEL";
     std::cout.width(15);
     std::cout<<"|| Kasa"<<"||";
     std::cout<<'\n';
@@ -138,8 +139,9 @@ void print(const std::list<Person*>& db)    {
 
         std::cout.width(10);
 
-        if (s->function==Person::Engagement::student)
+        if (s->engagement==Person::Engagement::student)
             std::cout<<std::left<<"|| " +std::to_string(s->getId());
+            else std::cout<<std::left<<"||";
         
         std::cout.width(35);
         std::cout<<"|| " +s->getName();
@@ -148,11 +150,12 @@ void print(const std::list<Person*>& db)    {
         std::cout.width(45);
         std::cout<<"|| " +s->getAddress();
         std::cout.width(15);
-        std::cout<<"|| " +std::to_string(s->getPesel())<<"||";
+        std::cout<<"|| " +std::to_string(s->getPesel());
         std::cout.width(15);
         
-        if (s->function==Person::Engagement::employee)
+        if (s->engagement==Person::Engagement::employee)
             std::cout<<"|| " +std::to_string(s->getSalary())<<"||";
+            else std::cout<<std::left<<"||"<<std::right<<"||";
 
         std::cout<<'\n';
     }
@@ -283,11 +286,18 @@ bool compName(const Person* s1, const Person* s2)  {
     return std::lexicographical_compare(s1->getLastName().begin(), s1->getLastName().end(),s2->getLastName().begin(),s2->getLastName().end());
 }
 
+bool compSalary(const Person* s1, const Person* s2)  {
+    return std::lexicographical_compare(s1->getLastName().begin(), s1->getLastName().end(),s2->getLastName().begin(),s2->getLastName().end());
+}
+
 void sortPesel(std::list<Person*> &db)   {
     db.sort(compPesel);
 }
 void sortName(std::list<Person*> &db)    {
     db.sort(compName);
+}
+void sortSalary(std::list<Person*> &db)    {
+    db.sort(compSalary);
 }
 
 void delStudent(std::list<Person*>& db)  {
@@ -300,4 +310,8 @@ void delStudent(std::list<Person*>& db)  {
     db.remove_if([id](const Person* s){    return s->getId()==id;   });     //WTF?!? Nie kumam o co kaman tej składni..
     
     std::cout<<"Usunięto "<<n<<" Studentów.\n\n";
+}
+
+void delEmployee(std::list<Person*>& db)  {
+
 }

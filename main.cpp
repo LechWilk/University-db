@@ -15,7 +15,7 @@ int main()  {
                 addStudent(PW);
                 break;
             case 'b':
-                addEmpoyee(PW);
+                addEmployee(PW);
                 break;
             case 'c':
                 delStudent(PW);
