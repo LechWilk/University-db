@@ -45,6 +45,9 @@ int main()  {
                 print(PW);
                 break;
             case 'k':
+                modSalary(PW);
+                break;
+            case 'l':
                 save(PW);
                 break;
             default:

@@ -15,6 +15,7 @@ class Employee   : public Person {
         {}
 
         float getSalary() const override {return salary_;};
+        void setSalary(float newSalary) {salary_+=newSalary;};
         unsigned getId() const override {return 0;};
 
         const Engagement engagement = Engagement::employee;

@@ -13,6 +13,7 @@ class Person    {
         bool isFemale() const;
         virtual unsigned getId() const = 0;
         virtual float getSalary() const = 0;
+        virtual void setSalary(float)   {return;};
 
         enum class Engagement   {
             none,

@@ -22,6 +22,7 @@ void serchPesel(const std::list<Person*>& db);
 void sortPesel(std::list<Person*>& db);
 void sortName(std::list<Person*>& db);
 void sortSalary(std::list<Person*>& db);
+void modSalary(std::list<Person*>& db);
 
 bool compPesel(const Person* s1, const Person* s2);
 bool compName(const Person* s1, const Person* s2);

@@ -18,8 +18,9 @@ char interface()    {
     "g: Drukuj bazę"<<'\n'<<
     "h: Sortuj po nazwisku"<<'\n'<<
     "i: Sortuj po numerze PESEL"<<'\n'<<
-    "j: Sortuj pracowników po zarobkach"<<'\n'<<'\n'<<    
-    "k: Zapisz do pliku"<<'\n'<<
+    "j: Sortuj pracowników po zarobkach"<<'\n'<<
+    "k: Daj podwyżkę"<<'\n'<<'\n'<<    
+    "l: Zapisz do pliku"<<'\n'<<
     "x: Wyjście"<<'\n'<<
     "***********************"<<'\n';
     char cmd;
@@ -271,22 +272,40 @@ void serchName(const std::list<Person*>& db)   {
 }
 void serchPesel(const std::list<Person*>& db)  {
     long givenPesel;
-    int resoults=0;
-    std::cout<<"Podaj proszę PESEL szukanego Studenta. ";
+    std::cout<<"Podaj proszę PESEL szukanego Człowieka. ";
     std::cin>>givenPesel;
     std::cout<<"Rezutaty:\n\n";
 
     for(auto& el:db)    {
         if(el->getPesel()==givenPesel)   {
-            std::cout<<el->getId()<<'\n';
+            if (el->engagement==Person::Engagement::student)
+                std::cout<<"Student o indeksie "<<el->getId()<<'\n';
+                else if (el->engagement==Person::Engagement::employee)
+                    std::cout<<"Pracownik zarabiający "<<el->getSalary()<<'\n';
             std::cout<<el->getName()<<'\n';
             std::cout<<el->getAddress()<<'\n'<<'\n';
-            resoults++;
         }
     }
+}
 
-    std::cout<<"Znaloziono "<<resoults<<" Studentów.\n\n";
+void modSalary(std::list<Person*>& db) {
+    long givenPesel;
+    float newSalary;
 
+    std::cout<<"Podaj proszę PESEL szukanego Człowieka. ";
+    std::cin>>givenPesel;
+    for(auto& el:db)    {
+        if(el->getPesel()==givenPesel)   {
+            if (el->engagement==Person::Engagement::student)
+                std::cout<<"Student zbiera na zupkę...\n";
+                else if (el->engagement==Person::Engagement::employee)  {
+                    std::cout   <<"Pracownik zarabiający "<<el->getSalary()<<'\n'
+                                <<"Podwyżka? O ile? ";
+                    std::cin    >>newSalary;
+                    el->setSalary(newSalary);
+                }
+        }
+    }
 }
 
 bool compPesel(const Person* s1, const Person* s2)  {
@@ -311,18 +330,28 @@ void sortSalary(std::list<Person*> &db)    {
     db.sort(compSalary);
 }
 
+// to improve delete functions!!!
+
 void delStudent(std::list<Person*>& db)  {
     unsigned id=0;
-    std::cout<<"Podaj proszę nr indeksu wykreślanego Studenta.";
+    std::cout<<"Podaj proszę nr indeksu wykreślanego studenta.";
     std::cin>>id;
     int n=0;
     for(auto& el:db)    if(el->getId()==id) n++;
     
-    db.remove_if([id](const Person* s){    return s->getId()==id;   });     //WTF?!? Nie kumam o co kaman tej składni..
+    db.remove_if([id](const Person* s){    return s->getId()==id;   });     //only pointer deleted, object stays still on the memory.
     
     std::cout<<"Usunięto "<<n<<" Studentów.\n\n";
 }
 
 void delEmployee(std::list<Person*>& db)  {
+    long pesel=0;
+    std::cout<<"Podaj proszę PESEL usuwanego pracownika.";
+    std::cin>>pesel;
+    
+    db.remove_if([pesel](const Person* s){   bool b= (s->getPesel()==pesel and s->engagement==Person::Engagement::employee); return b;   });
+    
+    //a==true?std::cout<<"Usunięto.\n\n":std::cout<<"Nie znaleziono PRACOWNIKA.\n\n";
 
+    std::cout<<"niestety nie mogę potwierdzić, czy coś zostało usunięte.....\n";
 }

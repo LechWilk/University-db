@@ -13,7 +13,8 @@ class Student   : public Person {
         {}
         
         float getSalary() const override {return 0;};
-        unsigned getId() const override {return id_;}
+        unsigned getId() const override {return id_;};
+        //void setSalary(float x) {return;};
 
     private:
         unsigned id_;
