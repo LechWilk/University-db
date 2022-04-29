@@ -33,7 +33,7 @@ void addStudent(std::list<Person*>& db)  {
     std::string firstN, lastN, address;
     char sex,tn;
     long nrPesel;
-    unsigned index=100001;
+    unsigned index=100000;
 
     std::cin.get();
 
@@ -234,7 +234,7 @@ void load(std::list<Person*>& db)   {
             newPerson = new Student(firstN, lastN, address, nrPesel, index, sex);
             else newPerson = new Employee(firstN, lastN, address, nrPesel, sex, salary);
         db.emplace_back(newPerson);
-        std::cout<<"Dodałem człowieka "<<lastN<<'\t'<<"ID:"<<index<<'\t'<<static_cast<int>(newPerson->engagement)<<'\n';
+//        std::cout<<"Dodałem człowieka "<<lastN<<'\t'<<"ID:"<<index<<'\t'<<static_cast<int>(newPerson->engagement)<<'\n';
 
     }
 }

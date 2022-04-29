@@ -1,2 +1,5 @@
-0	bzdzinski	jak	M	mala	51101728151 123,123
-10	dzban	jan	K	bazarna 55	76112298624 
+0	bzdzinski	jak	M	mala	51101728151	0.000000
+10	dzban	jan	K	bazarna 55	76112298624	0.000000
+100002	wilk	lech	M	slowackiego 26	83021709392	0.000000
+0	kowalski	jan	K	rynek 1	62032676824	12.000000
+0	nowak	jan	K	kielecka 69	63081877662	55.209999

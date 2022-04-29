@@ -1,4 +1,5 @@
 #include<string>
+#include<iostream>
 
 class Person    {
 
@@ -25,19 +26,22 @@ class Person    {
             female
         };
 
-        Person(const std::string fName, const std::string lName, std::string address, long pesel, Sex sex)
+        Person(const std::string fName, const std::string lName, std::string address, long pesel, Sex sex, Engagement engagement)
         :   fName_(fName)
         ,   lName_(lName)
         ,   address_(address)
         ,   pesel_(pesel)
         ,   sex_(sex)
-        {}
+        ,   engagement(engagement)
+        {
+//            std::cout<<"Dodałem człowieka "<<lName<<'\t'<<static_cast<int>(engagement)<<'\t'<<'\n';            
+        }
 
         Person(const std::string fName, const std::string lName)
-        :   Person(fName,lName,"",0,Sex::none)
+        :   Person(fName,lName,"",0,Sex::none,Engagement::none)
         {}
 
-        const Engagement engagement = Engagement::none;
+        const Engagement engagement; // = Engagement::none;
 
 
     private:

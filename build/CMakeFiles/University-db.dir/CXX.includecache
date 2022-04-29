@@ -28,8 +28,20 @@ person.hpp
 
 /home/leszol/CS/University-db/employee.hpp
 
+/home/leszol/CS/University-db/main.cpp
+db.hpp
+/home/leszol/CS/University-db/db.hpp
+list
+-
+
+/home/leszol/CS/University-db/person.cpp
+person.hpp
+/home/leszol/CS/University-db/person.hpp
+
 /home/leszol/CS/University-db/person.hpp
 string
+-
+iostream
 -
 
 /home/leszol/CS/University-db/student.hpp
