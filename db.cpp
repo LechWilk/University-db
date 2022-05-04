@@ -200,7 +200,7 @@ void save(const std::list<Person*>& db)    {
 }
 
 void load(std::list<Person*>& db)   {
-    std::ifstream fileDB("University-db.txt");
+    std::ifstream fileDB("../University-db.txt");
     std::string lineDB;
     std::string firstN, lastN, address;
     char sex;
