@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/University-db.dir/main.cpp.o CMakeFiles/University-db.dir/db.cpp.o CMakeFiles/University-db.dir/person.cpp.o  -o University-db 
