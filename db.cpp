@@ -348,9 +348,21 @@ void delStudent(std::list<Person*>& db)  {
     std::cout<<"Podaj proszę nr indeksu wykreślanego studenta.";
     std::cin>>id;
     int n=0;
-    for(auto& el:db)    if(el->getId()==id) n++;
+        Person* temp_ptr;
+    for(auto& el:db)    {
+        if(el->getId()==id) {
+            n++;
+            temp_ptr= el;
+            db.remove(el);
+            } 
+    }   
+    db.remove(temp_ptr);
+    delete temp_ptr;
+        
+
+    std::cout<<temp_ptr->getName();
     
-    db.remove_if([id](const Person* s){    return s->getId()==id;   });     //only pointer deleted, object stays still on the memory.
+    //db.remove_if([id](const Person* s){    return s->getId()==id;   });     //only pointer deleted, object stays still on the memory.
     
     std::cout<<"Usunięto "<<n<<" Studentów.\n\n";
 }
