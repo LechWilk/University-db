@@ -347,24 +347,10 @@ void delStudent(std::list<Person*>& db)  {
     unsigned id=0;
     std::cout<<"Podaj proszę nr indeksu wykreślanego studenta.";
     std::cin>>id;
-    int n=0;
-        Person* temp_ptr;
-    for(auto& el:db)    {
-        if(el->getId()==id) {
-            n++;
-            temp_ptr= el;
-            db.remove(el);
-            } 
-    }   
-    db.remove(temp_ptr);
-    delete temp_ptr;
-        
-
-    std::cout<<temp_ptr->getName();
     
-    //db.remove_if([id](const Person* s){    return s->getId()==id;   });     //only pointer deleted, object stays still on the memory.
+    auto n = db.remove_if([id](const Person* s){    return s->getId()==id;   });
     
-    std::cout<<"Usunięto "<<n<<" Studentów.\n\n";
+    std::cout<<"Usunięto "<<n<<" studentów.\n\n";
 }
 
 void delEmployee(std::list<Person*>& db)  {
@@ -372,9 +358,7 @@ void delEmployee(std::list<Person*>& db)  {
     std::cout<<"Podaj proszę PESEL usuwanego pracownika.";
     std::cin>>pesel;
     
-    db.remove_if([pesel](const Person* s){   bool b= (s->getPesel()==pesel and s->engagement==Person::Engagement::employee); return b;   });
+    auto n = db.remove_if([pesel](const Person* s){   bool b= (s->getPesel()==pesel and s->engagement==Person::Engagement::employee); return b;   });
     
-    //a==true?std::cout<<"Usunięto.\n\n":std::cout<<"Nie znaleziono PRACOWNIKA.\n\n";
-
-    std::cout<<"niestety nie mogę potwierdzić, czy coś zostało usunięte.....\n";
+    std::cout<<"Usunięto "<<n<<" pracowników.\n\n";
 }
