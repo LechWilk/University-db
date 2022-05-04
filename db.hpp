@@ -12,7 +12,7 @@ void delStudent(std::list<Person*>& db);
 void delEmployee(std::list<Person*>& db);
 
 void print(const std::list<Person*>& db);
-void printBreak(int);
+void printBreak();
 
 void save(const std::list<Person*>& db);
 void load(std::list<Person*>& db);

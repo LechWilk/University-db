@@ -1,13 +1,13 @@
-100004	brzeczyszczykiewicz	 grzegorz	K	chrzaszczyzowbrzeszyce 99	71031895963	0.000000
-0	kowalski	jan	K	rynek 1	62032676824	13.330000
-0	nowak	jan	K	kielecka 69	63081877662	55.209999
+100004	brzeczyszczykiewicz	grzegorz	K	chrzaszczyzowbrzeszyce 99	71031895963	0.000000
+0	kowalski	jan	M	rynek 1	73120775271	13.330000
+0	nowak	jan	M	kielecka 69	77041111693	55.209999
 100002	wilk	lech	M	slowackiego 26	83021709392	0.000000
-0	stara	baba	K	rynek 88	62032676824	12.3
-0	genowefa	pigwa	K	wiejska 12	63081877662	1.11
-100008	mlody	frajer	M	podbloczna 13	01301117743	0.0
-100003	piekny	kawaler	M	czerwona13	74020747476	0.0
-100005	bravo	john	M	aleja gwiazd 1	84082938174	0.0
-0	stary	dziad	M	rynek 99	60031998639	1000000.0
-0	starucha	pruchno	K	podziemna 1234	48121817613	777.7
-100006	czterdziecha	ryczaca	K	milf 69	71031895963	0.0
-100007	student	wieczny	M	akademicka 112	65022134443	0.0
+0	stara	baba	K	rynek 88	62032676824	12.300000
+0	genowefa	pigwa	K	wiejska 12	63081877662	1.110000
+100008	mlody	frajer	M	podbloczna 13	85111934198	0.000000
+100003	piekny	kawaler	M	czerwona13	98032592859	0.000000
+100005	bravo	john	M	aleja gwiazd 1	81102633851	0.000000
+0	stary	dziad	M	rynek 99	53062197339	90000.000000
+0	starucha	pruchno	K	podziemna 1234	55090445646	777.700012
+100006	czterdziecha	ryczaca	K	milf 69	81071997224	0.000000
+100007	student	wieczny	M	akademicka 112	57090675292	0.000000

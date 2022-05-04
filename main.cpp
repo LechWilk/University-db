@@ -7,6 +7,7 @@ int main()  {
     std::list<Person*> PW;
 
     load(PW);
+    print(PW);
     while(1)    {    
         switch(interface()) {
             case 'x':
@@ -33,11 +34,11 @@ int main()  {
                 print(PW);
                 break;
             case 'h':
-                sortPesel(PW);
+                sortName(PW);
                 print(PW);
                 break;
             case 'i':
-                sortName(PW);
+                sortPesel(PW);
                 print(PW);
                 break;
             case 'j':

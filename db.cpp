@@ -7,7 +7,6 @@
 char interface()    {
     
     std::cout<<
-    "***********************"<<'\n'<<
     "Menu bazy Studentów i Pracowników PW:"<<'\n'<<
     "a: Dodaj studenta"<<'\n'<<
     "b: Dodaj pracownika"<<'\n'<<
@@ -18,11 +17,10 @@ char interface()    {
     "g: Drukuj bazę"<<'\n'<<
     "h: Sortuj po nazwisku"<<'\n'<<
     "i: Sortuj po numerze PESEL"<<'\n'<<
-    "j: Sortuj pracowników po zarobkach"<<'\n'<<
+    "j: Sortuj pracowników po zarobkach"<<'\n'<<'\n'<<
     "k: Daj podwyżkę"<<'\n'<<'\n'<<    
     "l: Zapisz do pliku"<<'\n'<<
-    "x: Wyjście"<<'\n'<<
-    "***********************"<<'\n';
+    "x: Wyjście"<<'\n';
     char cmd;
     std::cin>>cmd;
     return cmd;
@@ -119,56 +117,69 @@ void addEmployee(std::list<Person*>& db)  {
 
 void print(const std::list<Person*>& db)    {
     std::string temp_sex;
-//framework
-    printBreak(127);
-    std::cout.width(10);
-    std::cout<<std::left<<"|| Index ";
-    std::cout.width(36);
-    std::cout<<"|| Imię i Nazwisko";
-    std::cout.width(5);
-    std::cout<<"||M/K";
-    std::cout.width(45);
-    std::cout<<"|| Adres ";
-    std::cout.width(15);
-    std::cout<<"|| PESEL";
-    std::cout.width(15);
-    std::cout<<"|| Kasa"<<"||";
-    std::cout<<'\n';
-    printBreak(127);
 
+//framework
+    printBreak();
+    std::cout.fill(' ');
+    std::cout.width(10);
+    std::cout<<std::left<<"| Index ";
+    std::cout.width(37);
+    std::cout<<"| Imię i Nazwisko";
+    std::cout.width(5);
+    std::cout<<"|M/K";
+    std::cout.width(45);
+    std::cout<<"| Adres ";
+    std::cout.width(15);
+    std::cout<<"| PESEL";
+    std::cout.width(15);
+    std::cout<<"| Kasa"<<"|";
+    std::cout<<'\n';
+    printBreak();
+
+    std::cout.fill(' ');
     for(const Person *s:db)  {
         temp_sex=s->isMale() ? "M" : temp_sex=s->isFemale() ? "K" : "";
 
         std::cout.width(10);
 
         if (s->engagement==Person::Engagement::student)
-            std::cout<<std::left<<"|| " +std::to_string(s->getId());
-            else std::cout<<std::left<<"||";
+            std::cout<<std::left<<"| " +std::to_string(s->getId());
+            else std::cout<<std::left<<"|";
         
-        std::cout.width(35);
-        std::cout<<"|| " +s->getName();
+        std::cout.width(36);
+        std::cout<<"| " +s->getName();
         std::cout.width(5);
-        std::cout<<"|| " +temp_sex;
+        std::cout<<"| " +temp_sex;
         std::cout.width(45);
-        std::cout<<"|| " +s->getAddress();
+        std::cout<<"| " +s->getAddress();
         std::cout.width(15);
-        std::cout<<"|| " +std::to_string(s->getPesel());
+        std::cout<<"| " +std::to_string(s->getPesel());
         std::cout.width(15);
         
         if (s->engagement==Person::Engagement::employee)
-            std::cout<<"|| " +std::to_string(s->getSalary())<<"||";
-            else std::cout<<std::left<<"||"<<std::right<<"||";
+            std::cout<<"| " +std::to_string(s->getSalary())<<"|";
+            else std::cout<<std::left<<"|"<<std::right<<"|";
 
         std::cout<<'\n';
     }
-    printBreak(127);
+    printBreak();
 }
 
-void printBreak(int len)    {
-    std::cout.fill('=');
-    std::cout.width(len);
-    std::cout<<'='<<'\n';
-    std::cout.fill(' ');
+void printBreak()    {
+    std::cout.fill('-');
+    std::cout.width(10);
+    std::cout<<std::left<<"+";
+    std::cout.width(36);
+    std::cout<<std::left<<"+";
+    std::cout.width(5);
+    std::cout<<std::left<<"+";
+    std::cout.width(45);
+    std::cout<<std::left<<"+";
+    std::cout.width(15);
+    std::cout<<std::left<<"+";
+    std::cout.width(15);
+    std::cout<<std::left<<"+";
+    std::cout<<"+"<<'\n';
 }
 
 void save(const std::list<Person*>& db)    {
@@ -317,7 +328,7 @@ bool compName(const Person* s1, const Person* s2)  {
 }
 
 bool compSalary(const Person* s1, const Person* s2)  {
-    return std::lexicographical_compare(s1->getLastName().begin(), s1->getLastName().end(),s2->getLastName().begin(),s2->getLastName().end());
+    return s1->getSalary()<s2->getSalary();
 }
 
 void sortPesel(std::list<Person*> &db)   {
